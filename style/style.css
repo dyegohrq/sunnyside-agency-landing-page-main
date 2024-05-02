@@ -178,6 +178,7 @@ a {
 
 .main .how-we-work .graphic-design .text-graphic-design,
 .main .how-we-work .photography .text-photography{
+    width: 360px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -186,6 +187,7 @@ a {
     text-align: center;
     padding: 50px 10px;
     gap: 20px;
+    margin: auto;
 }
 
 .main .how-we-work .graphic-design .text-graphic-design h3,
