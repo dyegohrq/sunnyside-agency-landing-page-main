@@ -10,6 +10,7 @@
     --Dark-desaturated-cyan: hsl(167, 40%, 24%); /*(graphic design text)*/
     --Dark-blue: hsl(198, 62%, 26%);/*(photography text)*/
     --Dark-moderate-cyan: hsl(168, 34%, 41%);/*(footer)*/
+    --background-footer: hsl(168, 44%, 70%);
 
     /* ### Neutral */
 
@@ -52,6 +53,10 @@ img {
 
 a {
     text-decoration: none;
+}
+
+li {
+    list-style-type: none;
 }
 
 #header {
@@ -210,4 +215,110 @@ a {
 .main .how-we-work .photography .text-photography h3,
 .main .how-we-work .photography .text-photography p{
     color: var(--Dark-blue);
+}
+
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 25px;
+    gap: 60px;
+}
+
+.clients h3 {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    color: var(--Grayish-blue);
+}
+
+.clients .client1,
+.clients .client2,
+.clients .client3 {
+    width: 325px;
+    display: grid;
+    gap: 20px;
+}
+
+.clients img{
+    width: 60px;
+    border-radius: 50%;
+}
+
+.clients p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+
+.clients .description-client {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.clients .description-client .name-client {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 18px;
+    font-weight: 900;
+    font-family: var(--font-fraunces);
+}
+
+.clients .description-client small {
+    font-family: var(--font-barlow);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--Grayish-blue);
+}
+
+.img-bitmap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.img-bitmap img {
+    width: 100%;
+    height: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 25px;
+    background: var(--background-footer);
+    gap: 65px;
+}
+
+.footer .logo-footer p {
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 900;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.footer .links-footer {
+    width: 100%;
+}
+
+.footer .links-footer ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .links-footer ul .links {
+    color: var(--Dark-moderate-cyan);
+}
+
+.footer .social-media {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .social-media i {
+    font-size: 1.3em;
+    color: var(--Dark-moderate-cyan);
 }
