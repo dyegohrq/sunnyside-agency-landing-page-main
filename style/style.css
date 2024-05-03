@@ -32,7 +32,6 @@
 
 body {
     font-size: 1.125em;
-    background-color: black;
 }
 
 h1,
@@ -94,6 +93,56 @@ li {
     height: 2px;
     border-radius: 2px;
     background: var(--White);
+}
+
+.header .nav-bar {
+    position: absolute;
+    width: 86%;
+    left: 7%;
+    height: 0;
+    background: var(--White);
+    visibility: hidden;
+    transition: all .8s ease-in-out;
+    padding: 45px 25px;
+}
+
+.header .active {
+    height: 285px;
+    visibility: visible;
+}
+
+.header #nav-bar .triangle {
+    position: absolute;
+    top: -1.3rem;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 1.5rem solid var(--White);
+    border-left: 1.5rem solid transparent;
+    z-index: 999;
+}
+
+.header #nav-bar .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.header #nav-bar .nav-list li a {
+    font-family: var(--font-barlow);
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+
+.header #nav-bar .nav-list .contact a {
+    color: var(--Very-dark-desaturated-blue);
+    font-family: var(--font-fraunces);
+    text-transform: uppercase;
+    font-size: .8em;
+    background-color: var(--Yellow);
+    padding: 15px 35px;
+    border-radius: 25px;
 }
 
 .header .header-main {
