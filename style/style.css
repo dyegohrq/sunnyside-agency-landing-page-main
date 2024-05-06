@@ -22,6 +22,8 @@
 
     --font-fraunces: "Fraunces", serif; /* Title */
     --font-barlow: "Barlow", sans-serif; /* Paragraf */
+
+    --transition: all .5s ease-in-out;
 }
 
 * {
@@ -103,7 +105,7 @@ li {
     height: 0;
     background: var(--White);
     visibility: hidden;
-    transition: all .8s ease-in-out;
+    transition: var(--transition);
     padding: 45px 25px;
 }
 
@@ -196,7 +198,7 @@ li {
     letter-spacing: 2px;
     border-bottom-width: 3px;
     border-bottom-style: solid;
-    transition: all ease-in-out .5s;
+    transition: var(--transition);
 }
 
 .main .service .service-demonstration .text-service .link-more.yellow {
@@ -277,11 +279,13 @@ li {
     gap: 60px;
 }
 
-.clients h3 {
+.separetad-client {
     text-transform: uppercase;
     font-size: 1em;
     letter-spacing: 4px;
     color: var(--Grayish-blue);
+    text-align: center;
+    margin-top: 60px;
 }
 
 .clients .client1,
@@ -334,44 +338,50 @@ li {
 }
 
 #footer {
+    background: var(--background-footer);
+}
+
+.footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 60px 25px;
-    background: var(--background-footer);
     gap: 65px;
 }
 
-.footer .logo-footer p {
+.footer .footer-container .logo-footer p {
     color: var(--Very-dark-desaturated-blue);
     font-weight: 900;
     font-size: 35px;
     letter-spacing: 1px;
 }
 
-.footer .links-footer {
+.footer .footer-container .links-footer {
     width: 100%;
 }
 
-.footer .links-footer ul {
+.footer .footer-container .links-footer ul {
     display: flex;
     justify-content: space-around;
 }
 
-.footer .links-footer ul .links {
+.footer .footer-container .links-footer ul .links {
     color: var(--Dark-moderate-cyan);
+    transition: var(--transition);
 }
 
-.footer .social-media {
+.footer .footer-container .social-media {
     width: 55%;
     display: flex;
     justify-content: space-between;
 }
 
-.footer .social-media i {
+.footer .footer-container .social-media i {
     font-size: 1.3em;
     color: var(--Dark-moderate-cyan);
+    transition: var(--transition);
+
 }
 
 @media screen and (min-width: 768px) {
@@ -407,11 +417,16 @@ li {
 
     .header #nav-bar .nav-list li a {
         color: var(--White);
+        transition: var(--transition);
+    }
+
+    .header #nav-bar .nav-list li a:hover {
+        color: var(--Very-dark-desaturated-blue);
     }
 
     .header #nav-bar .nav-list .contact a {
         background-color: var(--White);
-        transition: all .5s ease-in-out;
+        transition: var(--transition);
     }
 
     .header #nav-bar .nav-list .contact a:hover {
@@ -436,9 +451,74 @@ li {
     .main .service .service-demonstration .text-service {
         text-align: left;
         width: 50%;
+        max-width: 493px;
     }
 
     .main .service .service-demonstration .text-brand {
         order: -1;
+    }
+
+    .main .how-we-work {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);        
+        grid-template-rows: 500px;
+    }
+
+    .clients {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 593px;
+    }
+
+    .img-bitmap {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-container {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .footer .footer-container .links-footer ul .links:hover, 
+    .footer .footer-container .social-media i:hover {
+        color: var(--White);
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #header {
+        height: 100%;
+    }
+
+    .header .header-container {
+        height: 120px;
+        padding: 0px 130px;
+    }
+
+    .header .header-main h1 {
+        font-size: 70px;
+        margin-top: 149px;
+    }
+
+    .main .how-we-work {
+        grid-template-rows: 750px;
+    }
+
+    .main .how-we-work .graphic-design .text-graphic-design, 
+    .main .how-we-work .photography .text-photography {
+        width: 432px;
+        padding: 140px 10px;
+    }
+
+    .main .how-we-work .graphic-design .text-graphic-design h3, 
+    .main .how-we-work .photography .text-photography h3 {
+        font-size: 2.75em;
+        font-weight: 900;
+    }
+
+    .main .how-we-work .graphic-design .text-graphic-design p, 
+    .main .how-we-work .photography .text-photography p {
+        font-size: 1.1em;
+        font-weight: 500;
     }
 }
